@@ -1,0 +1,19 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://61.153.187.209:3306/activiti?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&nullCatalogMeansCurrent=true
+    username: root
+    password: root
+  activiti:
+    database-schema-update: false  #启动时检查数据库表，不存在则创建
+    history-level: full #activiti记录历史任务数据级别，full是最全的
+    db-history-used: true #创建数据库历史数据表
+  security:
+    user:
+      name: admin
+      password: admin
+server:
+  port: 7777
+swagger:
+  enabled: true
